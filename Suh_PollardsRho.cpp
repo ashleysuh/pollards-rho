@@ -1,12 +1,12 @@
 /*************************************************************************************************
- * Author: Ashley Suh										                                                         *
- * Date: 12/1/16										                                                             *
- * Class: MAD 4471 - Cryptography and Coding Theory					                                     *
- * Project: Pollard's Rho Method						                                                		 *
- * 												                                                                       *
- * Let p|N, if P(x) = P(y)mod p, then p|(x-y)(x+y) and gcd(N, x-y) = p.				                   *
- * Pollard's Rho is an algorithm to calculate the collisions of modulo p for p|N. 	          	 *
- * Since there are less values of P(x)mod p than P(x)mod N, our algorithm is more efficient	     *
+ * Author: Ashley Suh						                                 *
+ * Date: 12/1/2016					                                         *
+ * Class: MAD 4471 - Cryptography and Coding Theory					         *
+ * Project: Pollard's Rho Method				                 		 *
+ * 					                                                         *
+ * Let p|N, if P(x) = P(y)mod p, then p|(x-y)(x+y) and gcd(N, x-y) = p.				 *
+ * Pollard's Rho is an algorithm to calculate the collisions of modulo p for p|N. 	         *
+ * Since there are less values of P(x)mod p than P(x)mod N, our algorithm is more efficient	 *
  * than hard computing prime factors of N which break the RSA cryptosystem. Runtime is sqrt(N)	 *
  *************************************************************************************************/
 
@@ -21,8 +21,6 @@ int pollardsRhoMethod(long int, int, int); // finds the prime factors of N
 
 int main (void) {
 
-	
-	/* Can easily switch to N,x, and c being read from command line if preferred */
 	long int N; // RSA number
 	int c, x; // c is the arbitrary int of x^2 + c, x is our initial guess
 
